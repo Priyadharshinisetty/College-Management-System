@@ -1,0 +1,20 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <img class="masthead-avatar mb-5" src="/assets/login.jpg" alt="..." />
+    <!-- Login Form -->
+    <form id="loginstaff" #insert1="ngForm" (ngSubmit)="insertLoginStaff(insert1)">
+      <h1 class="h3 mb-3 fw-normal">Welcome To Staff-Login</h1>
+      <input type="email" class="fadeIn third" id="email" name="email" placeholder="name@example.com" ngModel><br><br>
+      <input type="password" class="fadeIn third" id="password" name="password" placeholder="Password" ngModel><br><br>
+      <input type="submit" class="fadeIn fourth" value="Log In"  name="Login">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" type="submit" name="register"  routerLink="/register">If not a Member ::: Register</a>
+    </div>
+
+  </div>
+</div>
+  

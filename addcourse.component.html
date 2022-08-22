@@ -1,0 +1,71 @@
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="adminnavi">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top">Welcome To Expert College</a>
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Admin
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/admin" routerLinkActive="active">Home</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/loginc" routerLinkActive="active">LogOut</a></li>
+            </ul>
+              		
+        </div>
+         
+    </div>
+</nav>
+
+
+<div class="py-5 text-center" id="addcourse">
+    <div class="container">
+        <img src="/assets/login.jpg">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"> !! Admin Section !!</h2>
+
+        <hr class="featurette-divider">
+
+        <h2> -- Add Course --</h2>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+            <form id="addcourseForm" data-sb-form-api-token="API_TOKEN" #insertaddcourse="ngForm" (ngSubmit)="insertAddcourse(insertaddcourse)">
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="coursename" type="text" name="coursename" placeholder="Enter coursename..."
+                        data-sb-validations="required" ngModel />
+                    <label for="coursename">Enter Course Name</label>
+                    <div class="invalid-feedback" data-sb-feedback="coursename:required">A Coursename is required.</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <label for="deparatment" class="form-label">Deparatments</label>
+                    <select class="form-select" id="deparatment" name="deparatment" required ngModel>
+                      <option>Select...</option>
+                      <option value="CSE">CSE</option>
+                      <option value="EEE">EEE</option>
+                      <option value="ECE"> ECE</option>
+                      <option value="IT"> IT</option>
+                      <option value="Auto"> Auto</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid department.
+                    </div>
+                </div>
+
+                <!--How many Subjects input-->
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="subjectcount" type="text" name="subjectcount" placeholder="Enter your subjectcount..."
+                        data-sb-validations="required" ngModel />
+                    <label for="subjectcount">Subjects Count:</label>
+                    <div class="invalid-feedback" data-sb-feedback="subjectcount:required">A subjectcount is required.</div>
+                </div>
+                
+
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit" name="insert"> Add course</button>
+            </form>
+        </div>
+    </div>

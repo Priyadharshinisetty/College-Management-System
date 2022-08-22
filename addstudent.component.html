@@ -1,0 +1,161 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="staffnavi">
+  <div class="container">
+    <a class="navbar-brand" href="#page-top">Welcome To Expert College</a>
+    <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
+      Staff
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/staff"
+            routerLinkActive="active">Home</a></li>
+        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/loginc"
+            routerLinkActive="active">LogOut</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+
+
+<div class="py-5 text-center" id="addstudent">
+  <div class="container">
+    <img src="/assets/login.jpg">
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"> !! Adding Section !!</h2>
+
+    <hr class="featurette-divider">
+
+    <h2> -- Add Student --</h2>
+  </div>
+
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-7">
+      <form id="addstudentForm" data-sb-form-api-token="API_TOKEN" #insertaddstudent="ngForm"
+        (ngSubmit)="insertAddstudent(insertaddstudent)">
+        <!--First Name input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="name" type="text" name="name" placeholder="Enter your name..."
+            data-sb-validations="required" ngModel />
+          <label for="name">Full name</label>
+          <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+        </div>
+        <!--Rollno input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="rollno" type="text" name="rollno" placeholder="Enter rollno..."
+            data-sb-validations="required" ngModel />
+          <label for="rollno">Roll Number</label>
+          <div class="invalid-feedback" data-sb-feedback="rollno:required">A rollno is required.</div>
+        </div>
+
+        <!-- Email address input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com"
+            data-sb-validations="required,email" ngModel />
+          <label for="email">Email address</label>
+          <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+          <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <label for="deparatment" class="form-label">Deparatments</label>
+          <select class="form-select" id="deparatment" name="deparatment" required ngModel>
+            <option>Select...</option>
+            <option value="CSE">CSE</option>
+            <option value="EEE">EEE</option>
+            <option value="ECE"> ECE</option>
+            <option value="IT"> IT</option>
+            <option value="Auto"> Auto</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid Deparatment.
+          </div>
+        </div>
+
+        <!--12th School Name input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="higherschoolname" type="text" name="higherschoolname"
+            placeholder="Enter your higherschoolname..." data-sb-validations="required" ngModel />
+          <label for="higherschoolname">Higher Secondary School Name</label>
+          <div class="invalid-feedback" data-sb-feedback="higherschoolname:required">A higherschoolname is required.
+          </div>
+        </div>
+        <!--10th School Name input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="matricschoolname" type="text" name="matricschoolname"
+            placeholder="Enter your matricschoolname..." data-sb-validations="required" ngModel />
+          <label for="matricschoolname">Matric School Name</label>
+          <div class="invalid-feedback" data-sb-feedback="matricschoolname:required">A Matricschoolname is required.
+          </div>
+        </div>
+        <!--12th Percentage input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="highermark" type="text" name="highermark"
+            placeholder="Enter your highermark Percentage..." data-sb-validations="required" ngModel />
+          <label for="highermark">Highermark Percentage </label>
+          <div class="invalid-feedback" data-sb-feedback="highermark:required">A highermark is required.</div>
+        </div>
+        <!--10th Percentage input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="matricmark" type="text" name="matricmark"
+            placeholder="Enter your matricmark Percentage..." data-sb-validations="required" ngModel />
+          <label for="matricmark">Matricmark Percentage</label>
+          <div class="invalid-feedback" data-sb-feedback="matricmark:required">A matricmark is required.</div>
+        </div>
+
+        <!--  Address input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="address" type="address" name="address" placeholder="1234 Main St"
+            data-sb-validations="required,address" ngModel />
+          <label for="email">Address</label>
+          <div class="invalid-feedback" data-sb-feedback="address:required">An address is required.</div>
+          <div class="invalid-feedback" data-sb-feedback="address:address">Address is not valid.</div>
+        </div>
+
+        <!-- Phone number input-->
+        <div class="form-floating mb-3">
+          <input class="form-control" id="phonenumber" type="tel" name="phonenumber" placeholder="(+91) ***** "
+            data-sb-validations="required" ngModel />
+          <label for="phonenumber">Phone number</label>
+          <div class="invalid-feedback" data-sb-feedback="phonenumber:required">A phone number is required.</div>
+        </div>
+
+
+        <div class="form-floating mb-3">
+          <label for="country" class="form-label">Country</label>
+          <select class="form-select" id="country" name="country" required ngModel>
+            <option>Select...</option>
+            <option value="United States">United States</option>
+            <option value="India">India</option>
+            <option value="Australia"> Australia</option>
+            <option value="Singapore"> Singapore</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid country.
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <label for="state" class="form-label">State</label>
+          <select class="form-select" id="state" name="state" required ngModel>
+            <option >Select...</option>
+            <option value="Kerala">Kerala</option>
+            <option value="TamilNadu"> TamilNadu</option>
+            <option value="Maharastra">Maharastra</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+          </select>
+          <div class="invalid-feedback">
+            Please provide a valid state.
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit" name="insert"> Add Student</button>
+      </form>
+    </div>
+  </div>
